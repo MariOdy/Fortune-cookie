@@ -10,8 +10,8 @@ const HomePage: React.FC = () => {
       rotationSpeed={0.03}
       maxSize={3}
       starCount={300}
-      starColor='#FFE7C3'
-      opacity={.8}
+      starColor="#FFE7C3"
+      opacity={0.8}
     >
       <Home>
         <FortuneCookie />
