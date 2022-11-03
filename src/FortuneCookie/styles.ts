@@ -13,9 +13,9 @@ export const Cookie = styled.button`
 
 export const Paper = styled.div`
   background-color: white;
-  width: 900px;
-  height: 100px;
-  padding: 20px 16px;
+  width: min(900px, 90vw);
+  min-height: 100px;
+  padding: 20px 16px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +36,10 @@ export const Paper = styled.div`
     text-align: center;
     font-weight: 600;
     letter-spacing: 0.4%;
+
+    @media (max-width: 590px) {
+      font-size: 15px;
+    }
   }
   span {
     display: block;
@@ -44,11 +48,15 @@ export const Paper = styled.div`
     position: absolute;
     bottom: 6px;
     right: 15%;
+
+    @media (max-width: 590px) {
+      font-size: 13px;
+    }
   }
 `;
 
 const CookiePart = styled.img`
-  --size: 500px;
+  --size: min(500px, 90vw);
   height: var(--size);
   width: var(--size);
   position: absolute;

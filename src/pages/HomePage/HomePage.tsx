@@ -1,7 +1,7 @@
 import React from "react";
 import { Home } from "./styles";
-import AnimatedStars from "react-animated-stars";
 import FortuneCookie from "src/FortuneCookie";
+import AnimatedStars from "react-animated-stars";
 
 const HomePage: React.FC = () => {
   return (

@@ -9,4 +9,5 @@ export const Home = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 `;
