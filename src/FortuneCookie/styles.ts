@@ -7,6 +7,7 @@ export const Cookie = styled.button`
   position: relative;
   cursor: pointer;
   margin-top: 20%;
+  color: black;
 
   outline: none;
 `;
@@ -25,6 +26,8 @@ export const Paper = styled.div`
   position: relative;
 
   clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+
+  will-change: clip-path;
 
   ${Cookie}[data-cracked="true"] & {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -62,6 +65,8 @@ const CookiePart = styled.img`
   position: absolute;
   transition: inset 0.6s ease-in-out, transform 0.6s ease-in-out;
   bottom: -60px;
+
+  will-change: inset, transform;
 `;
 
 export const LeftPartCookie = styled(CookiePart)`
