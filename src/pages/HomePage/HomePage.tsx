@@ -1,29 +1,22 @@
 import React from "react";
-import useQuotes from "src/utils/useQuotes";
-import { Home, RefreshButton } from "./styles";
+import { Home } from "./styles";
+import AnimatedStars from "react-animated-stars";
+import FortuneCookie from "src/FortuneCookie";
 
 const HomePage: React.FC = () => {
-  const quotes = useQuotes();
-  const quotesTexts = quotes.map((quote) => quote.text);
-  const quotesAuthors = quotes.map((quote) => quote.author);
-
-  const [quote, setQuote] = React.useState(
-    "Genius is one percent inspiration and ninety-nine percent perspiration."
-  );
-  const [quoteAuthor, setQuoteAuthor] = React.useState("Thomas Edison");
-
-  const changeQuote = () => {
-    let quoteId = Math.floor(Math.random() * quotesTexts.length);
-    setQuote(quotesTexts[quoteId]);
-    setQuoteAuthor(quotesAuthors[quoteId]);
-  };
-
   return (
-    <Home>
-      <RefreshButton onClick={changeQuote}>Refresh</RefreshButton>
-      <p>"{quote}"</p>
-      <span>{quoteAuthor ? quoteAuthor : "someone..."}</span>
-    </Home>
+    <AnimatedStars
+      bgColor="#1A1520"
+      rotationSpeed={0.03}
+      maxSize={3}
+      starCount={300}
+      starColor='#FFE7C3'
+      opacity={.8}
+    >
+      <Home>
+        <FortuneCookie />
+      </Home>
+    </AnimatedStars>
   );
 };
 

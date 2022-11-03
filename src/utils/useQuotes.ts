@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-type quotesProps = {
+export type Quote = {
   text: string;
   author: string;
 };
 
 const useQuotes = () => {
-  const [quotes, setQuotes] = useState<quotesProps[]>([]);
+  const [quotes, setQuotes] = useState<Quote[]>([]);
 
   useEffect(() => {
     const api = async () => {
