@@ -3,11 +3,4 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-image: url("/public/images/fortune-cookies.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: 'Nunito', sans-serif;
 
-}
